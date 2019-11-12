@@ -98,6 +98,7 @@ class Model(GANModelDesc):
 
         def viz3(name, a, b, c):
             with tf.name_scope(name):
+                #im = tf.concat([a, b, c], axis=2)
                 im = tf.concat([a, b, c], axis=3)
                 #im = tf.transpose(im, [0, 2, 3, 1])
                 im = (im + 1.0) * 128
